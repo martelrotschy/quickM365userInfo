@@ -2,11 +2,8 @@
 #### quickM365userInfo - https://github.com/martelrotschy/quickM365userInfo ####
 ################################################################################
 
-# Prompt for Office 365 credentials
-$credential = Get-Credential -Message "Enter your Office 365 credentials"
-
 # Connect to Exchange Online
-Connect-ExchangeOnline -Credential $credential
+Connect-ExchangeOnline
 
 # Get a list of users in the Office 365 tenant
 $users = Get-EXOMailbox -ResultSize Unlimited
